@@ -1,16 +1,15 @@
 import sc2
 from sc2 import Race, Difficulty
 from sc2.player import Bot, Computer
-from zerg.zerg_rush import ZergRushBot
 from protoss.threebase_voidray import ThreebaseVoidrayBot
+from zerg.hydralisk_push import Hydralisk
 from terran.cyclone_push import CyclonePush
-
 sc2.run_game(
-    sc2.maps.get("AscensiontoAiurLE"),
+    sc2.maps.get("CeruleanFallLE"),
     [
         Bot(Race.Terran, CyclonePush(), name="Cyclone Push"),
-        Computer(Race.Random, Difficulty.CheatInsane),
+        Computer(Race.Random, Difficulty.VeryEasy),
     ],
     realtime=False,
-    save_replay_as="Level_07.SC2Replay",
+    save_replay_as="Level2_04.SC2Replay",
 )

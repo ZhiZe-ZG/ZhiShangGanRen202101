@@ -1,15 +1,15 @@
 import sc2
 from sc2 import Race, Difficulty
 from sc2.player import Bot, Computer
+from protoss.cannon_rush import CannonRushBot
 from zerg.hydralisk_push import Hydralisk
-from terran.ramp_wall import RampWallBot
-
+from terran.proxy_rax import ProxyRaxBot
 sc2.run_game(
-    sc2.maps.get("AbyssalReefLE"),
+    sc2.maps.get("CactusValleyLE"),
     [
-        Bot(Race.Terran, RampWallBot(), name="Ramp Wall"),
         Bot(Race.Zerg, Hydralisk(), name="Hydralisk"),
+        Bot(Race.Terran, ProxyRaxBot(), name="ProxyRaxBot"),
     ],
     realtime=False,
-    save_replay_as="Level_03.SC2Replay",
+    save_replay_as="Level2_02.SC2Replay",
 )

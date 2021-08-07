@@ -1,16 +1,15 @@
 import sc2
 from sc2 import Race, Difficulty
 from sc2.player import Bot, Computer
-from zerg.expand_everywhere import ExpandEverywhere
 from protoss.warpgate_push import WarpGateBot
+from zerg.expand_everywhere import ExpandEverywhere
 from terran.cyclone_push import CyclonePush
-
 sc2.run_game(
-    sc2.maps.get("BackwaterLE"),
+    sc2.maps.get("CyberForestLE"),
     [
         Bot(Race.Protoss, WarpGateBot(), name="Warp Gate"),
-        Computer(Race.Random, Difficulty.Medium),
+        Bot(Race.Zerg, ExpandEverywhere(), name="Expand Everywhere"),
     ],
     realtime=False,
-    save_replay_as="Level_09.SC2Replay",
+    save_replay_as="Level2_05.SC2Replay",
 )
