@@ -6,7 +6,10 @@ from .zerg.onebase_broodlord import BroodlordBot
 
 sc2.run_game(
     sc2.maps.get("16-BitLE"),
-    [Bot(Race.Protoss, CannonRushBot()), Bot(Race.Zerg, BroodlordBot())],
+    [
+        Bot(Race.Protoss, CannonRushBot(), name="Cannon Rush"),
+        Bot(Race.Zerg, BroodlordBot(), name="Broodlord"),
+    ],
     realtime=False,
-    save_replay_as="Level_01.SC2Replay"
+    save_replay_as="Level_01.SC2Replay",
 )
